@@ -1,0 +1,60 @@
+programa q5;
+
+var
+    dia,mes,ano,A,B,C,D,semana: INTEIRO
+inicio
+      ESCREVA("Escreva a data")
+      LEIA(dia,mes,ano)
+      A := ano - 1900
+      SE ((ano mod 4 == 0) ou (ano mod 400 == 0 ) e (ano mod 100<>0)) ENTAO
+        inicio
+            B <- (A div 4)-1;
+        fimse
+      SENAO
+        inicio
+            B <- A div 4;
+        fimse
+      ESCOLHA mes
+        CASO 01
+            C:= 0
+        CASO 02
+            C:= 3
+        CASO 03
+            C:= 3
+        CASO 04
+            C:= 6
+        CASO 05
+            C:= 1
+        CASO 06
+            C:= 4
+        CASO 07
+            C:= 6
+        CASO 08
+            C:= 2
+        CASO 09
+            C:= 5
+        CASO 10
+            C:= 0
+        CASO 11
+            C:= 3
+        CASO 12
+            C:= 5
+      FIMESCOLHA
+      D:= dia - 1
+      semana:=(A+B+C+D) mod 7
+      ESCOLHA semana
+        CASO 0
+            ESCREVA("Segunda-Feira")
+        CASO 1
+            ESCREVA("Terca-Feira")
+        CASO 2
+            ESCREVA("Quarta-Feira")
+        CASO 3
+            ESCREVA("Quinta-Feira")
+        CASO 4
+            ESCREVA("Sexta-Feira")
+        CASO 5
+            ESCREVA("Sabado")
+        CASO 6
+            ESCREVA("Domingo")
+      FIMESCOLHA

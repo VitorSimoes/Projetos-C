@@ -1,0 +1,14 @@
+Programa Q8
+
+var
+numerador,denominador,quociente,resto:inteiro
+
+Inicio
+      Escreva("Digite o Numerador")
+      Leia(numerador)
+      Escreva("Digite o Denominador")
+      Leia(denominador)
+      quociente:=numerador/denominador
+      resto:=numerador-(quociente*denominador)
+      Escreva("O resto da divisão eh ",resto)
+Fim.
